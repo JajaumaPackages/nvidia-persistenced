@@ -1,0 +1,13 @@
+[Unit]
+Description=NVIDIA Persistence Daemon
+After=syslog.target dkms.service
+Requires=dkms.service
+
+[Service]
+Type=forking
+ExecStartPre=-/sbin/rmmod nouveau
+ExecStart=/usr/sbin/nvidia-persistenced --user nvidia-persistenced
+PIDFile=/var/run/nvidia-persistenced/nvidia-persistenced.pid
+
+[Install]
+WantedBy=multi-user.target
