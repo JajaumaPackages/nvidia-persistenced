@@ -1,5 +1,5 @@
 Name:           nvidia-persistenced
-Version:        375.26
+Version:        375.39
 Release:        1%{?dist}
 Summary:        NVIDIA GPU persistence daemon
 
@@ -76,6 +76,9 @@ getent passwd %{name} >/dev/null || \
 
 
 %changelog
+* Fri Feb 17 2017 Jajauma's Packages <jajauma@yandex.ru> - 375.39-1
+- Update to latest upstream release
+
 * Fri Feb 17 2017 Jajauma's Packages <jajauma@yandex.ru> - 375.20-1
 - Update to latest upstream release
 
