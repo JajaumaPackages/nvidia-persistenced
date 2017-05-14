@@ -1,11 +1,11 @@
 Name:           nvidia-persistenced
-Version:        375.39
+Version:        381.22
 Release:        1%{?dist}
 Summary:        NVIDIA GPU persistence daemon
 
 License:        GPLv2
 URL:            http://docs.nvidia.com/deploy/driver-persistence/index.html
-Source0:        ftp://download.nvidia.com/XFree86/nvidia-persistenced/nvidia-persistenced-%{version}.tar.bz2
+Source0:        http://download.nvidia.com/XFree86/nvidia-persistenced/nvidia-persistenced-%{version}.tar.bz2
 Source1:        %{name}.service
 Source2:        %{name}.conf
 
@@ -76,6 +76,10 @@ getent passwd %{name} >/dev/null || \
 
 
 %changelog
+* Sun May 14 2017 Jajauma's Packages <jajauma@yandex.ru> - 381.22-1
+- Update to latest upstream release
+- Fix broken FTP D/L link
+
 * Fri Feb 17 2017 Jajauma's Packages <jajauma@yandex.ru> - 375.39-1
 - Update to latest upstream release
 
